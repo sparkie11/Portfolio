@@ -52,7 +52,6 @@
                 font-size: 30px;
 
                 span{
-                    font-size: inherit;
                     color: crimson;
                 }
 
@@ -72,8 +71,8 @@
             }
 
             @keyframes arrowBlink {
-                0% { opacity: 0; }
-                50% { opacity: 1; }
+                // 0% { opacity: 0; }
+                // 50% { opacity: 1; }
                 100% { opacity: 0; }
             }
         }
