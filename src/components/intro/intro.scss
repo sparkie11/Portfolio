@@ -29,7 +29,6 @@
 
     .right{
         flex: 0.5;
-        background-color: red;
 
 
         .wrapper{
@@ -51,6 +50,11 @@
             }
             h3{
                 font-size: 30px;
+
+                span{
+                    font-size: inherit;
+                    color: crimson;
+                }
 
             }
 
