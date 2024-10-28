@@ -17,6 +17,19 @@ export default function Portfolio() {
           <img src='https://gautamwise.com/_next/image?url=%2Fimages%2Fcapeclouds.webp&w=256&q=75' alt=''/>
           <h3>Banking app</h3>
         </div>
+        <div className="item">
+          <img src='https://gautamwise.com/_next/image?url=%2Fimages%2Fcapeclouds.webp&w=256&q=75' alt=''/>
+          <h3>Banking app</h3>
+        </div>        <div className="item">
+          <img src='https://gautamwise.com/_next/image?url=%2Fimages%2Fcapeclouds.webp&w=256&q=75' alt=''/>
+          <h3>Banking app</h3>
+        </div>        <div className="item">
+          <img src='https://gautamwise.com/_next/image?url=%2Fimages%2Fcapeclouds.webp&w=256&q=75' alt=''/>
+          <h3>Banking app</h3>
+        </div>        <div className="item">
+          <img src='https://gautamwise.com/_next/image?url=%2Fimages%2Fcapeclouds.webp&w=256&q=75' alt=''/>
+          <h3>Banking app</h3>
+        </div>
       </div>
     </div>
   )
