@@ -1,7 +1,9 @@
 import { East, West } from '@mui/icons-material'
 import './works.scss'
+import { useState } from 'react'
 
 export default function Work() {
+  const [currentSlide, setCurrentSlide] = useState(0)
   const data = [
     {
       id: 1,
@@ -23,11 +25,23 @@ export default function Work() {
     },
   ]
 
+  const handleClick = (way) =>{
+    // if(way === "left" && currentSlide > 0){
+    //   setCurrentSlide(currentSlide - 1)
+    // }
+    // if(way === "right" && currentSlide < data.length - 1){
+    //   setCurrentSlide(currentSlide + 1)
+    // }
+
+    way === "left" ? setCurrentSlide(currentSlide > 0 ? currentSlide -1 : 2) :
+    setCurrentSlide(currentSlide < data.length -1 ? currentSlide + 1 : 0)
+  }
+
   return (
     <div className="works" id="works">
-      <div className="slider">
-        {data.map(d => (
-          <div className="container">
+      <div className="slider" style={{transform: `translateX(-${currentSlide * 100}vw )`}}>
+        {data.map((d) => (
+          <div className="container" key={d.id}>
             <div className="item">
               <div className="left">
                 <div className="leftContainer">
@@ -51,8 +65,14 @@ export default function Work() {
           </div>
         ))}
       </div>
-      <West className="arrow west" />
-      <East className="arrow east" />
+      <div onClick={()=>handleClick("left")}>
+      <West className="arrow west"  />
+
+      </div>
+      <div onClick={()=>handleClick("right")}>
+
+      <East className="arrow east"   />
+      </div>
     </div>
   )
 }
