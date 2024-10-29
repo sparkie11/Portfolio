@@ -7,6 +7,8 @@
     justify-content: center;
     position: relative;
 
+
+
     .arrow{
         font-size: 40px;
         position: absolute;
@@ -19,6 +21,10 @@
         &.east{
             right: 100px;
         }
+
+        @include mobile{
+            display: none;
+        }
     }
 
     .slider{
@@ -27,6 +33,12 @@
         position: absolute;
         left: 0;
         transition: all 1s ease-out;
+
+        @include mobile{
+            height:100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .container{
 
@@ -44,6 +56,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @include mobile{
+                    width: 90%;
+                    height: 180px;
+                    margin: 20px 0px ;
+                }
 
 
                 .left{
